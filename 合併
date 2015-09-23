@@ -1,0 +1,44 @@
+#個人上共用
+個人在自己的支線上不該受到限制,但併回共用時不需歷史資料
+策略1:merge
+策略2:rebase
+```shell
+md merge1
+cd merge1
+git init
+echo a > a.txt
+git add a.txt
+git commit -m "first"
+git checkout -b peter
+echo b > a.txt
+git commit -am ,
+echo c > a.txt
+git commit -am ,
+echo d > a.txt
+git commit -am ok
+git checkout master
+```
+```shell
+git merge peter
+git log
+```
+>Fast-forward, 所有的歷史都加入了
+兩條併為一條, 不能undo merge, 自己退版
+```shell
+>git checkout master
+>git reset --hard HEAD~3
+```
+再合併
+```shell
+git merge --no-ff peter
+git log
+```
+雖然多了支線的感覺, 但無用的歷史還在
+```shell
+還原
+```
+再合併
+```shell
+>git merge --squash peter
+```
+不知為何沒作用
