@@ -1,12 +1,16 @@
 # 建立repository
-基本上有UI工具就用工具, 指令我來學就好了, 使用GitHub Desktop、Source tree或Tortoise Git都很好,
+基本上有UI工具就用工具, 使用GitHub Desktop、Source tree或Tortoise Git都很好,
 我用GitHub Desktop建立一個Repository, 主要是因為他的Git ignore有我想要的Node.
 
 ![git001](https://cloud.githubusercontent.com/assets/1026320/9849913/c0499318-5b21-11e5-836c-f8936524b11b.png)
 
 建立好了之後, 它會幫我建立.gitattributes及.gitignore, 並且commit一個版本在master上.
-先將此master publish到GitHub上, 現在可以在GitHub網站上看到TA專案了.
+先將此master publish到GitHub上, 現在可以在GitHub網站上看到TA專案了,
+基本上GitHub Desktop就用到這裡, 之後我都使用SourceTree。
+# 建立起點
+接下來我要為團隊建立一個起點供
 # 開始
+接下來我要依Git Flow的方式發行下一個版本在master上, 這個版本會是團隊開發的
 再來我建立一個Express站台
 ```shell
 >express -TA -e
